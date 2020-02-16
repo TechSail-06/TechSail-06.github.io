@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Woorden spel </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color:Aquamarine;
+            }
+            form {
+                font-size: 1.5em;
+            }
+            .scrambled, input, button {
+                font-family: monospace;
+                font-size: 2em;
+            }
+            input {
+                text-transform: lowercase;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+    <h1>Woord Spelletje!</h1>
+    <form id="word1">
+        <label>
+            Dit zijn woorden, maar dan gehusseld, haal ze uit elkaar en vind het woord!:<Br>
+            <span class="scrambled">IAPON</span>
+            <br>
+            <input type="text" size="10">
+        </label>
+        <button type="submit">Check</button>
+    </form>
+    
+    <form id="word2">
+        <label>
+            <span class="scrambled">LLABON</span>
+            <br>
+            <input type="text" size="10">
+        </label>
+        <button type="submit">Check</button>
+    </form>
+    <form id="word3">
+        <label>
+            <span class="scrambled">LWEUE</span>
+            <br>
+            <input type="text" size="10">
+        </label>
+        <button type="submit">Check</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        // when the user submits the form,
+        $('form').on('submit', function(event) {
+            event.preventDefault()
+            var answer = $(this).find('[type=text]').val()
+            
+            
+     if ($(this).attr('id') === 'word1' && answer==='piano'){  
+             $(this).find('[type=text]').css('background-color', 'lime')
+            } else if ($(this).attr('id') === 'word2' && answer==='ballon') {
+                $(this).find('[type=text]').css('background-color', 'lime')
+            } else if ($(this).attr('id') === 'word3' && answer==='leeuw') {
+                $(this).find('[type=text]').css('background-color', 'lime')
+            } else {
+                $(this).find('[type=text]').css('background-color', 'red')
+            }
+            
+        });
+        //   check that their answer is correct
+        //   and show them appropriate message
+    </script>
+    </body>
+</html>
