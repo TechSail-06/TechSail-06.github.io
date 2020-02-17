@@ -1,18 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>English Chap3 and Chap4</title>
-    
-    <style>
-    		
-    </style>
-</head>
-<body>
-<h1 id='header'>English Chapter 3 and Chapter 4</h1>
+    <head>
+         <title>English Chap3 and Chap4</title>
+
+          <style>
+          	#explanation {
+            	background-color:#fbff8f;
+                border:2px dashed red;
+                margin-top:20px;
+                height:500px;
+                padding:30px;
+            }
+
+          </style>
+    </head>
+    <body>
+        <h1 id='header'>English Chapter 3 and Chapter 4</h1>
+        <h4 id='subtitle_header'> Click the buttons to get the information</h4>
+        <div class="reading-list">
+            <h4>reading:</h4>
+            <button id="main-paragraphs">Indentifying main ideas of paragraphs</button>
+            <button id="fos">Indentifying facts, oppinions and speculations</button>
+        </div>
+        <div class="grammar-list">
+            <h4>grammar:</h4>
+            <button id="ps-vs-pp">Past Simple v/s Present Perfect</button>
+            <button id="pps-vs-ppc">Present Perfect Simple v/s Present Perfect Continuous</button>
+            <button id="future">Expressing the future</button>
+            <button id="fp-vs-fc">Future Perfect v/s Future Continuous</button>
+        </div>
+        <div class="vocabulary">
+            <h4>Vocabulary:</h4>
+            <button id="idioms">Idioms</button>
+            <button id="suffixes">Noun Suffixes</button>
+            <button id="values">Values</button>
+            <button id="adverbs">Adverbs</button>
+            <button id="environment">The environment</button>
+            <button id="prefixes">Prefixes</button>
+            <button id="prepositions">Verb + Preposition</button>
+            <button id="collocations">Collocations: Charities</button>
+        </div>
+        
+        <div id='explanation'></div>
 
 
-<script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        /* the ids
+        	 $("#main-paragraphs")
+             $("#fos")
+             $("#ps-vs-pp")
+             $("#pps-vs-ppc")
+             $("#future")
+             $("#fp-vs-fc")
+             $("#idioms")
+             $("#suffixes")
+             $("#values")
+             $("#adverbs")
+             $("#Environment")
+             $("#prefixes")
+             $("#prepositions")
+             $("#collocations")
+            */
+            var $expl_box = $('#explanation')
+            $('button').on('click', function() {
+            	element = $(this).attr('id');
+                if (element === 'main-paragraphs') {
+                	$expl_box.html('<p class=\'paragraph\'>In a paragraph you <strong> always </strong> have a topic sentence. A topic sentence:</p> ' +
+                	'<ul class=\'paragraph\'><li>Is usually the 1st, 2nd or last sentence</li><li>Is more general than other sentences</li><li>If you turn the sentence into a question, the other sentences should answer it</li>')
+                	$('.paragraph').hide()
+                	$('.paragraph').slideDown(2940)
+                } else if (element === 'fos') {
+              	  $expl_box.html('')
+                } else if (element === 'ps-vs-pp') {
+              	  $expl_box.html('')
+                } else if (element === 'pps-vs-ppc') { 
+              	  $expl_box.html('')
+                } else if (element === 'future') {
+             	   $expl_box.html('')
+                } else if (element === 'fp-vs-fc') {
+             	   $expl_box.html('')
+                } else if (element === 'idioms') {
+             	   $expl_box.html('')
+                } else if (element === 'suffixes') {
+             	   $expl_box.html('')
+                } else if (element === 'values') {
+              	  $expl_box.html('')
+                } else if (element === 'adverbs') {
+              	  $expl_box.html('')
+                } else if (element === 'environment') {
+             	  $expl_box.html('')
+                } else if (element === 'prefixes') {
+               	  $expl_box.html('')
+                } else if (element === 'prepositions') {
+              	  $expl_box.html('')
+                } else if (element === 'collocations') {
+            	  $expl_box.html('')
+                };
+                
+            });
 
-</script>
-</body>
+        </script>
+    </body>
 </html>
